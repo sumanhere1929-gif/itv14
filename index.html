@@ -1,0 +1,104 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Chocolate Day ❤️</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ONLY animation styles added -->
+  <style>
+    .text {
+      position: absolute;
+      font-size: 30px;
+      font-family: 'Corporate', cursive;
+      color: #f6f0f3;
+      animation: floatUp 2.5s ease-out forwards;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @keyframes floatUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-80px);
+      }
+    }
+  </style>
+</head>
+
+<body style="background-image: url('4358.jpg'); background-size: cover; background-position: center; min-height: 200vh;">
+
+<!-- ONLY animation script added -->
+<script>
+  document.addEventListener("click", function (e) {
+    const text = document.createElement("div");
+    text.className = "text";
+    text.innerText = "khusi❤️suman";
+
+    // random position near click
+    const offsetX = Math.floor(Math.random() * 60) - 30;
+    const offsetY = Math.floor(Math.random() * 60) - 30;
+
+    text.style.left = e.pageX + offsetX + "px";
+    text.style.top = e.pageY + offsetY + "px";
+
+    document.body.appendChild(text);
+
+    setTimeout(() => {
+      text.remove();
+    }, 2500);
+  });
+</script>
+
+</body>
+</html>
+
+
+
+<nav>
+  <span>The Girl Who Stole My Heart 👩✨🔐</span>
+</nav>
+
+<section class="hero">
+  <h1 style="color: rgb(228, 146, 207);font-family: 'Comic Sans MS';"> HAPPY CHOCOLATE DAY ❤️🥰😍</h1>
+  <p style="font-family: cursive;">You make my life sweeter every day.</p>
+</section>
+
+<section class="why">
+  <h2 style="color:rgb(166, 235, 166);font-family: 'Comic sans';">Why you'r sooo sweet </h2>
+  <div class="card">
+    <p>🍫 You melt my stress</p>
+    <p>💖 Your smile is my favorite flavor</p>
+    <p>🥰 Life feels better with you</p>
+  </div>
+</section>
+
+<section class="memories">
+  <h2 style="font-family: 'chalk dust';">some special moment's with you </h2>
+  <div class="gallery">
+    <img src="WhatsApp Image 2026-02-08 at 10.50.35 PM.jpeg" onclick="popHearts(event)">
+    <img src="WhatsApp Image 2026-02-09 at 12.46.52 AM (1).jpeg" onclick="popHearts(event)">
+    <img src="WhatsApp Image 2026-02-09 at 12.46.52 AM (2).jpeg" onclick="popHearts(event)">
+  </div>
+</section>
+
+<section class="surprise">
+  <button onclick="showLove()">Tap for Sweetness 🍫💖</button>
+</section>
+
+<div id="sweetPopup" class="popup">
+  <div class="popup-content">
+    <img src="WhatsApp Image 2026-02-09 at 12.46.52 AM.jpeg">
+    <p id="typingText"></p>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
